@@ -1,0 +1,9 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "MFEprimer"
+theme = "book"
+
+[params]
+    BookMenuBundle = '/menu'
+    BookSection = '*'
+    type = 'docs'
