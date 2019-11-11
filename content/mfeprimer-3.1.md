@@ -38,7 +38,7 @@ Before getting started, I'd like to make a summary for different versions. Pleas
 
 ### Install
 
-1. Please download the right version for your machine: https://github.com/quwubin/MFEprimer-3.0/releases/tag/v3.1.0 (take Linux version as an example).
+1. Please download the right version for your machine: https://github.com/quwubin/MFEprimer-3.0/releases (take Linux version as an example).
 2. Uncompress the file.
 3. Make sure the file has the execute permission.
 4. Run with option "-h" to get help message. You can rename the file to `mfeprimer` as you wish.
@@ -203,14 +203,11 @@ p4                             CCGAAATTTTTAATGCAGGTTTGGTAGT              28   35
 p5                             GGACACTCTATGGGAAAGAGTGTCC                 25   52.00   62.91    -26.07         0         1
 
 
-
 Hairpin List (1)
 
 Hairpin 1: p5
 
-
     Score: 9, Tm = 26.56 °C, Delta G = -4.48 kcal/mol
-
 
     /////////-------\\\\\\\\\
     GGACACTCTATGGGAAAGAGTGTCC
@@ -330,4 +327,62 @@ The relation between `mfeprimer` and its sub-commands: `mfeprimer` do a full qua
 
 ## 3. Local web server
 
-to be added.
+### Download and install
+
+1. Please download the right version for your machine: https://github.com/quwubin/MFEprimer-3.0/releases (take the Mac version as an example).
+2. Uncompress the file.
+3. Make sure the file has the execute permission.
+4. Run with option "-h" to get help message. You can rename the file to `mfeprimer` as you wish.
+
+``` bash
+# download the executable mfeprimer-web file
+wget -c https://github.com/quwubin/MFEprimer-3.0/releases/download/v3.1.1/mfeprimer-web-3.1.1-darwin-amd64.tar.gz
+
+# uncompress the file
+tar zxvf mfeprimer-web-3.1.1-darwin-amd64.tar.gz
+
+# The file tree is:
+tree -L 2
+
+.
+├── conf
+│   └── app.conf
+├── mfedb
+│   ├── chrM.fa
+│   ├── chrM.fa.fai
+│   ├── chrM.fa.json
+│   ├── chrM.fa.log
+│   ├── chrM.fa.primerqc
+│   └── chrM.fa.primerqc.fai
+├── mfeprimer-web
+├── static
+│   ├── css
+│   ├── fonts
+│   ├── img
+│   └── js
+└── views
+    ├── dimer
+    ├── hairpin
+    ├── layout.html
+    ├── seq
+    └── spec
+
+
+# test it
+./mfeprimer-web
+
+# open your browser and enter the following address, and you will see the default page.
+
+http://localhost:8080/
+```
+
+![mfepriemr-web front page](https://tva1.sinaimg.cn/large/006y8mN6ly1g8txd89sf6j31au0u04is.jpg)
+
+### Configure the server
+
+Open the "conf/app.conf", change the corresponding item following the references in the file.
+
+### Add database
+
+There is an example database named "chrM.fa" in "mfedb" directory. You can place any database here 
+and index the database with command `mfeprimer index -i dbname.fasta`.
