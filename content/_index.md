@@ -19,7 +19,7 @@ Quality control for primers is crucial for a successful PCR reaction. For exampl
 
 ## Usage
 
-[Download and Online Servers]({{< relref "/online-server" >}})
+[Online servers and download command-line]({{< relref "/online-server" >}})
 
 ## How to cite us
 

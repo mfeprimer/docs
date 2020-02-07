@@ -31,8 +31,7 @@ Before getting started, I'd like to make a summary for different versions. Pleas
 
 ## 1. Web servers maintained by the author‌
 
-1. https://mfeprimer3.igenetech.com/ [version 3.0] web server funded by [iGeneTech](http://www.igenetech.com/), a company aims to provide kit and service for target capture and sequencing, also is the company the author works for.
-2. http://124.207.243.56:8081/ [version 3.1, for test] web server funded by Prof. Dongsheng Zhao (AMMS, 军事医学科学院). Currently, there is only human genome (hg19) available and will add other genomes later.
+[Online Servers]({{< relref "/online-server" >}})
 
 ## 2. Command-line version
 
@@ -331,8 +330,7 @@ The relation between `mfeprimer` and its sub-commands: `mfeprimer` do a full qua
 
 1. Please download the right version for your machine: https://github.com/quwubin/MFEprimer-3.0/releases (take the Mac version as an example).
 2. Uncompress the file.
-3. Make sure the file has the execute permission.
-4. Run with option "-h" to get help message. You can rename the file to `mfeprimer` as you wish.
+3. test it.
 
 ``` bash
 # download the executable mfeprimer-web file
